@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body {
+            background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            width: 320px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 150, 0.3);
+            backdrop-filter: blur(8px);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #00ff9d;
+            text-shadow: 0 0 10px #00ff9d;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            width: 65%;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            box-shadow: 0 0 10px #00ff9d;
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        input::placeholder {
+            color: #bbb;
+        }
+
+        button {
+            padding: 10px 15px;
+            height: auto;
+            background-color: #00ff9d;
+            color: black;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #00cc7a;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #00ff9d;
+        }
+
+        #alltask {
+            margin-top: 15px;
+            text-align: left;
+            min-height: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 10px;
+            color: #ccc;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <form>
+            <input type="text" name="task" id="task" placeholder="Enter your task...">
+            <button type="submit">Add</button>
+        </form>
+        <div id="alltask">Your tasks will appear here.</div>
+    </div>
+
+    <script src="todo-list.js"></script>
+</body>
+
+</html>
